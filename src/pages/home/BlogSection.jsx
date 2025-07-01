@@ -1,9 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import subtitleIcon from "../../assets/images/icons/section-title.png";
-import blogImage1 from "../../assets/images/blog/blog-image1.jpg";
-import blogImage2 from "../../assets/images/blog/blog-image2.jpg";
-import blogImage3 from "../../assets/images/blog/blog-image3.jpg";
+import { imgPath } from '../../utils/constant';
 import "../../assets/css/BlogSection.css";
 
 const BlogSection = () => {
@@ -13,7 +10,7 @@ const BlogSection = () => {
       id: 1,
       title: "The Future of AI in Business: Trends to Watch",
       excerpt: "Discover the latest trends and technologies that are shaping the future of web development and how they can benefit your business.",
-      image: blogImage1,
+      image: imgPath.blogImage1,
       author: "John Smith",
       comments: 12,
       date: "2024-12-10"
@@ -22,7 +19,7 @@ const BlogSection = () => {
       id: 2,
       title: "Digital Transformation Strategies for 2024",
       excerpt: "Learn about the fundamental principles of UI/UX design that every designer should know to create exceptional user experiences.",
-      image: blogImage2,
+      image: imgPath.blogImage2,
       author: "Sarah Johnson",
       comments: 8,
       date: "2024-12-08"
@@ -31,7 +28,7 @@ const BlogSection = () => {
       id: 3,
       title: "Cybersecurity Best Practices for Modern Companies",
       excerpt: "Explore the best practices for mobile app development that ensure high performance, security, and user satisfaction.",
-      image: blogImage3,
+      image: imgPath.blogImage3,
       author: "Mike Davis",
       comments: 15,
       date: "2024-12-05"
@@ -53,7 +50,7 @@ const BlogSection = () => {
           <Col lg={8}>
             <div className="blog-section-header">
               <img 
-                src={subtitleIcon} 
+                src={imgPath.sectionTitle} 
                 alt="Section Icon" 
                 className="section-icon"
               />

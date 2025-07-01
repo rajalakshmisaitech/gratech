@@ -4,18 +4,7 @@ import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import banner1 from "../../assets/images/banner/banner-image.jpg";
-import banner2 from "../../assets/images/banner/banner-image2.jpg";
-import banner3 from "../../assets/images/banner/banner-image3.jpg";
-import bannerShapeLeft from "../../assets/images/banner/banner-shape-left.png";
-import bannerSolidLeftShape from "../../assets/images/banner/banner-solid-left-shape.png";
-import bannerRegularLeftShape from "../../assets/images/banner/banner-regular-left-shape.png";
-import bannerShapeRight from "../../assets/images/banner/banner-shape-right.png";
-import bannerShapeRightLine from "../../assets/images/banner/banner-shape-right-line.png";
-import bannerRightLine1 from "../../assets/images/banner/banner-right-line1.png";
-import bannerRightLine2 from "../../assets/images/banner/banner-right-line2.png";
-import bannerRightLine3 from "../../assets/images/banner/banner-right-line3.png";
-import bannerRightLine4 from "../../assets/images/banner/banner-right-line4.png";
+import { imgPath } from '../../utils/constant';
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const slides = [
@@ -23,19 +12,19 @@ const slides = [
     headline: "Excellent IT Services for Your Success",
     subheadline: "Consectetur adipiscing elit aenean scelerisque at augue vitae consequat quisque eget congue velit in cursus leo sed sodales est eget turpis.",
     button: "Explore More",
-    image: banner1,
+    image: imgPath.bannerImage,
   },
   {
     headline: "Empowering Your Business with Technology",
     subheadline: "We deliver innovative solutions to help your business grow and succeed in the digital era.",
     button: "Our Services",
-    image: banner2,
+    image: imgPath.bannerImage2,
   },
   {
     headline: "Trusted IT Partner for Enterprises",
     subheadline: "Partner with us for reliable, scalable, and secure IT services tailored to your needs.",
     button: "Contact Us",
-    image: banner3,
+    image: imgPath.bannerImage3,
   },
 ];
 
@@ -66,43 +55,43 @@ const Banner = () => {
         {slides.map((slide, idx) => (
           <SwiperSlide key={idx}>
             <div className="banner__shape-right2" data-animation="slideInRight" data-duration="3s" data-delay=".3s" style={{ animationDelay: '0.3s', animationDuration: '3s' }}>
-              <img src={bannerShapeRightLine} alt="shape" />
+              <img src={imgPath.bannerShapeRightLine} alt="shape" />
             </div>
             <div className="banner__shape-right1" data-animation="slideInRight" data-duration="2s" data-delay=".3s" style={{ animationDelay: '0.3s', animationDuration: '2s' }}>
-              <img src={bannerShapeRight} alt="shape" />
+              <img src={imgPath.bannerShapeRight} alt="shape" />
             </div>
             <div className="banner__shape-left3 wow slideInLeft" style={{ visibility: 'visible', animationName: 'slideInLeft' }}>
-              <img className="sway__animation" src={bannerShapeLeft} alt="shape" />
+              <img className="sway__animation" src={imgPath.bannerShapeLeft} alt="shape" />
             </div>
             <div data-animation="slideInLeft" data-duration="2s" data-delay=".3s" className="banner__shape-left2 wow slideInLeft" style={{ animationDelay: '0.3s', animationDuration: '2s' }}>
-              <img src={bannerRegularLeftShape} alt="shape" />
+              <img src={imgPath.bannerRegularLeftShape} alt="shape" />
             </div>
             <div data-animation="slideInLeft" data-duration="2s" data-delay=".3s" className="banner__shape-left1 wow slideInLeft" style={{ animationDelay: '0.3s', animationDuration: '2s' }}>
-              <img src={bannerSolidLeftShape} alt="shape" />
+              <img src={imgPath.bannerSolidLeftShape} alt="shape" />
             </div>
             <div
               className={`banner__right-line1 wow slideInRight`} data-animation="slideInRight" data-duration="2s" data-delay="0.9s"
               style={{ animationDelay: '0.9s', animationDuration: '2s' }}
             >
-              <img src={bannerRightLine1} alt="shape" />
+              <img src={imgPath.bannerRightLine1} alt="shape" />
             </div>
             <div
               className={`banner__right-line2 wow slideInRight`} data-animation="slideInRight" data-duration="2s" data-delay="1.1s"
               style={{ animationDelay: '1.1s', animationDuration: '2s' }}
             >
-              <img src={bannerRightLine2} alt="shape" />
+              <img src={imgPath.bannerRightLine2} alt="shape" />
             </div>
             <div
               className={`banner__right-line3 wow slideInRight`} data-animation="slideInRight" data-duration="2s" data-delay="1.3s"
               style={{ animationDelay: '1.3s', animationDuration: '2s' }}
             >
-              <img src={bannerRightLine3} alt="shape" />
+              <img src={imgPath.bannerRightLine3} alt="shape" />
             </div>
             <div
               className={`banner__right-line4 wow slideInRight`} data-animation="slideInRight" data-duration="2s" data-delay="1.5s"
               style={{ animationDelay: '1.5s', animationDuration: '2s', visibility: 'visible' }}
             >
-              <img src={bannerRightLine4} alt="shape" />
+              <img src={imgPath.bannerRightLine4} alt="shape" />
             </div>
             <div className="banner-slide" style={{ background: `url(${slide.image}) center/cover no-repeat` }}>
               <div className="container">

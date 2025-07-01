@@ -1,29 +1,25 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import counterIcon1 from "../../assets/images/icons/counter-icon1.png";
-import counterIcon2 from "../../assets/images/icons/counter-icon2.png";
-import counterIcon3 from "../../assets/images/icons/counter-icon3.png";
-import counterIcon4 from "../../assets/images/icons/counter-icon4.png";
-import counterShape from "../../assets/images/shapes/counnter-bg-shape.png";
+import { imgPath } from '../../utils/constant';
 
 const counters = [
   {
-    icon: counterIcon1,
+    icon: imgPath.counterIcon1,
     number: "6,561+",
     desc: "satisfied clients",
   },
   {
-    icon: counterIcon2,
+    icon: imgPath.counterIcon2,
     number: "600+",
     desc: "finished projects",
   },
   {
-    icon: counterIcon3,
+    icon: imgPath.counterIcon3,
     number: "250+",
     desc: "skilled experts",
   },
   {
-    icon: counterIcon4,
+    icon: imgPath.counterIcon4,
     number: "590+",
     desc: "media posts",
   },
@@ -46,7 +42,7 @@ const CounterSection = () => (
             </Col>
           ))}
         </Row>
-        <img src={counterShape} alt="Counter Shape" style={{ position: 'absolute', right: 0, bottom: 0, zIndex: -1, pointerEvents: 'none' }} />
+        <img src={imgPath.counnterBgShape} alt="Counter Shape" style={{ position: 'absolute', right: 0, bottom: 0, zIndex: -1, pointerEvents: 'none' }} />
       </div>
     </div>
   </section>

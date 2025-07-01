@@ -2,13 +2,9 @@ import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
-import subtitleIcon from "../../assets/images/icons/section-title.png";
-import author1 from "../../assets/images/testimonial/testimonial-image1.png";
-import author2 from "../../assets/images/testimonial/testimonial-image2.png";
-import { FaStar, FaRegStar, FaQuoteRight } from "react-icons/fa";
+import { imgPath } from '../../utils/constant';
+import { FaStar, FaRegStar } from "react-icons/fa";
 import "../../assets/css/TestimonialSection.css";
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -19,14 +15,14 @@ const TestimonialSection = () => {
       text: "Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus leo",
       name: "Alex Rony",
       position: "Web Designer",
-      image: author1,
+      image: imgPath.testimonialImage1,
       rating: 4
     },
     {
       text: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Pellentesque habitant morbi tristique senectus et netus.",
       name: "Sarah Johnson",
       position: "Marketing Director",
-      image: author2,
+      image: imgPath.testimonialImage2,
       rating: 5
     }
   ];
@@ -99,7 +95,7 @@ const TestimonialSection = () => {
             <div className="content-container">
               <div className="content-header">
                 <img 
-                  src={subtitleIcon} 
+                  src={imgPath.sectionTitle} 
                   alt="Section Icon" 
                   className="section-icon"
                 />

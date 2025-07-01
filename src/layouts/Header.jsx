@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Container, Button, Offcanvas, Form, InputGroup } from 'react-bootstrap';
+import { Navbar, Nav, Container, Offcanvas, Form, InputGroup } from 'react-bootstrap';
 import { FaBars, FaPlus, FaSearch, FaEnvelope, FaPhoneAlt, FaTelegramPlane, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { FaArrowRightLong } from "react-icons/fa6";
-import logo from '../assets/images/logo/logo.svg';
+import { imgPath } from '../utils/constant';
 
 const Header = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -43,7 +43,7 @@ const Header = () => {
         <Navbar bg="white" expand="xl" className="header-navbar">
           <Container>
             <Navbar.Brand href="#home" className="fw-bold d-flex align-items-center logo-container">
-              <img src={logo} alt="Gratech Logo" />
+              <img src={imgPath.logo} alt="Gratech Logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="main-navbar-nav" as="div" onClick={handleShow} style={{ border: 'none', background: 'none' }}>
               <FaBars style={{ fontSize: 24 }} />
@@ -65,7 +65,7 @@ const Header = () => {
             <Offcanvas show={showOffcanvas} onHide={handleClose} placement="end" className="header-offcanvas">
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title>
-                  <img src={logo} alt="Gratech Logo" style={{ height: 32 }} />
+                  <img src={imgPath.logo} alt="Gratech Logo" style={{ height: 32 }} />
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="d-flex flex-column h-100">

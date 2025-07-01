@@ -1,10 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import subtitleIcon from "../../assets/images/icons/section-title.png";
-import processImage1 from "../../assets/images/process/process-image1.png";
-import processImage2 from "../../assets/images/process/process-image2.png";
-import processImage3 from "../../assets/images/process/process-image3.png";
-import processArry from "../../assets/images/process/process-arry.png";
+import { imgPath } from '../../utils/constant';
 
 const WorkProcessSection = () => {
   // Process data with actual images from process folder
@@ -13,19 +9,19 @@ const WorkProcessSection = () => {
       id: 1,
       title: "Discovery & Planning",
       description: "In a free hour, when our power of choice is untrammelled and when nothing prevents dolor sit amet, consectetur",
-      image: processImage1
+      image: imgPath.processImage1
     },
     {
       id: 2,
       title: "Design & Prototyping",
       description: "In a free hour, when our power of choice is untrammelled and when nothing prevents dolor sit amet, consectetur",
-      image: processImage2
+      image: imgPath.processImage2
     },
     {
       id: 3,
       title: "Development",
       description: "In a free hour, when our power of choice is untrammelled and when nothing prevents dolor sit amet, consectetur",
-      image: processImage3
+      image: imgPath.processImage3
     }
   ];
 
@@ -37,7 +33,7 @@ const WorkProcessSection = () => {
           <Col lg={8}>
             <div className="d-flex align-items-center justify-content-center gap-2 mb-3">
               <img 
-                src={subtitleIcon} 
+                src={imgPath.sectionTitle} 
                 alt="Section Icon" 
               />
               <span style={{ 
@@ -80,7 +76,7 @@ const WorkProcessSection = () => {
                     transform: "translate(-50%, -50%)"
                   }} className="bobble__animation">
                     <img 
-                      src={processArry} 
+                      src={imgPath.processArry} 
                       alt="Process Arrow" 
                       style={{
                         maxWidth: "100%",

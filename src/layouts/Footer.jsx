@@ -2,16 +2,10 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { FaTwitter } from "react-icons/fa";
 import { FaAnglesRight, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { IoMdTime } from "react-icons/io";
 import { MdCall } from "react-icons/md";
-import logoLight from "../assets/images/logo/logo.svg";
-import footerShadow from "../assets/images/shapes/footer-shadow-shape.png";
-import footerShapeRight from "../assets/images/shapes/footer-solid-right.png";
-import footerShapeSolidRight from "../assets/images/shapes/footer-regular-right.png";
-import footerShapeRegularLeft from "../assets/images/shapes/footer-regular-left.png";
-import footerShapeSolidLeft from "../assets/images/shapes/footer-solid-left.png";
+import { imgPath } from '../utils/constant';
 
 const Footer = () => {
 
@@ -20,19 +14,19 @@ const Footer = () => {
       {/* Main Footer Content */}
       <div className="footer-main">
         <div className="footer__shadow-shape">
-          <img src={footerShadow} alt="Footer Shadow Shape" />
+          <img src={imgPath.footerShadowShape} alt="Footer Shadow Shape" />
         </div>
         <div className="footer__shape-solid-right wow slideInRight" data-wow-delay="00ms" data-wow-duration="1500ms">
-          <img className="sway_Y__animation" src={footerShapeSolidRight} alt="shape" />
+          <img className="sway_Y__animation" src={imgPath.footerSolidRight} alt="shape" />
         </div>
         <div className="footer__shape-regular-right wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-          <img src={footerShapeRight} alt="shape" />
+          <img src={imgPath.footerSolidRight} alt="shape" />
         </div>
         <div className="footer__shape-regular-left wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms">
-          <img src={footerShapeRegularLeft} alt="shape" />
+          <img src={imgPath.footerRegularLeft} alt="shape" />
         </div>
         <div className="footer__shape-solid-left wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-          <img className="sway_Y__animation" src={footerShapeSolidLeft} alt="shape" />
+          <img className="sway_Y__animation" src={imgPath.footerSolidLeft} alt="shape" />
         </div>
         <Container>
           <Row className="justify-content-around gy-4">
@@ -40,7 +34,7 @@ const Footer = () => {
             <Col lg={3} md={6}>
               <div className="mb-3">
                 <img 
-                  src={logoLight}
+                  src={imgPath.logoLight}
                   alt="Gratech Logo" 
                   height="40"
                   className="mb-3"

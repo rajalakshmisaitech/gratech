@@ -2,28 +2,19 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-// Import brand images
-import brandImage1 from "../../assets/images/brand/brand-image1.png";
-import brandImage2 from "../../assets/images/brand/brand-image2.png";
-import brandImage3 from "../../assets/images/brand/brand-image3.png";
-import brandImage4 from "../../assets/images/brand/brand-image4.png";
-import brandImage5 from "../../assets/images/brand/brand-image5.png";
-import brandShape from "../../assets/images/shapes/brand-shape.png";
+import { imgPath } from '../../utils/constant';
 
 const clientLogos = [
-  { id: 1, name: "Brand 1", logo: brandImage1 },
-  { id: 2, name: "Brand 2", logo: brandImage2 },
-  { id: 3, name: "Brand 3", logo: brandImage3 },
-  { id: 4, name: "Brand 4", logo: brandImage4 },
-  { id: 5, name: "Brand 5", logo: brandImage5 },
-  { id: 6, name: "Brand 1", logo: brandImage1 },
-  { id: 7, name: "Brand 2", logo: brandImage2 },
+  { id: 1, name: "Brand 1", logo: imgPath.brandImage1 },
+  { id: 2, name: "Brand 2", logo: imgPath.brandImage2 },
+  { id: 3, name: "Brand 3", logo: imgPath.brandImage3 },
+  { id: 4, name: "Brand 4", logo: imgPath.brandImage4 },
+  { id: 5, name: "Brand 5", logo: imgPath.brandImage5 },
+  { id: 6, name: "Brand 1", logo: imgPath.brandImage1 },
+  { id: 7, name: "Brand 2", logo: imgPath.brandImage2 },
 ];
 
 const ClientLogoSection = () => (
@@ -46,7 +37,7 @@ const ClientLogoSection = () => (
           zIndex: -1
         }}>
           <img 
-            src={brandShape} 
+            src={imgPath.brandShape} 
             alt="Brand Shape" 
             style={{
               maxWidth: "100%",

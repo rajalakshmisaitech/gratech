@@ -1,14 +1,7 @@
 import React from "react";
 import { Row, Col, Button } from "react-bootstrap";
-import aboutMainImg from "../../assets/images/about/about-image1.jpg";
-import aboutVideoImg from "../../assets/images/about/about-image2.png";
-import aboutShape from "../../assets/images/shapes/about-circle.png";
-// import aboutShape from "../../assets/images/banner/banner-solid-left-shape.png";
-import serviceIcon1 from "../../assets/images/icons/about-icon1.png";
-import serviceIcon2 from "../../assets/images/icons/about-icon2.png";
-import founderImg from "../../assets/images/about/about-info.png";
-import { FaPlay, FaArrowRightLong } from "react-icons/fa6";
-import aboutLineShape from "../../assets/images/shapes/about-line.png";
+import { imgPath } from '../../utils/constant';
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const AboutSection = () => (
   <section className="section" style={{ background: "#f6f9fc", padding: "120px 0 240px 0", position: 'relative', overflow: 'hidden' }}>
@@ -18,7 +11,7 @@ const AboutSection = () => (
         <Col xl={6} className="wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ visibility: 'visible', animationDuration: '1500ms', animationDelay: '200ms', animationName: 'fadeInRight' }}>
           <div className="about__left-item">
             <div className="image big-image">
-              <img src={aboutMainImg} alt="image" />
+              <img src={imgPath.aboutImage1} alt="image" />
             </div>
             <div className="image sm-image">
               <div className="video__btn-wrp">
@@ -26,10 +19,10 @@ const AboutSection = () => (
                   <a className="video-popup" href="https://www.youtube.com/watch?v=iVqz_4M5mA0"><i className="fa-solid fa-play"></i></a>
                 </div>
               </div>
-              <img src={aboutVideoImg} alt="image" />
+              <img src={imgPath.aboutImage2} alt="image" />
             </div>
             <div className="circle-shape">
-              <img src={aboutShape} alt="shape" />
+              <img src={imgPath.aboutCircle} alt="shape" />
             </div>
           </div>
         </Col>
@@ -49,7 +42,7 @@ const AboutSection = () => (
             <Col md={6}>
               <div style={{ borderRadius: 8, padding: 18, display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{ background: 'rgba(60, 114, 252, 0.1)', padding: 12 }}>
-                  <img src={serviceIcon1} alt="Best Services" />
+                  <img src={imgPath.aboutIcon1} alt="Best Services" />
                 </div>
                 <div>
                   <div style={{ fontWeight: 700, color: '#0f0d1d', fontSize: 18 }}>Best Services</div>
@@ -60,7 +53,7 @@ const AboutSection = () => (
             <Col md={6}>
               <div style={{ borderRadius: 8, padding: 18, display: 'flex', alignItems: 'center', gap: 16 }}>
                 <div style={{ background: 'rgba(60, 114, 252, 0.1)', padding: 12 }}>
-                  <img src={serviceIcon2} alt="24/7 Call Support" />
+                  <img src={imgPath.aboutIcon2} alt="24/7 Call Support" />
                 </div>
                 <div>
                   <div style={{ fontWeight: 700, color: '#0f0d1d', fontSize: 18 }}>24/7 Call Support</div>
@@ -74,7 +67,7 @@ const AboutSection = () => (
               Explore More <FaArrowRightLong style={{ fontSize: 22 }} />
             </Button>
             <div className="d-flex align-items-center gap-3 mt-3 mt-md-0">
-              <img src={founderImg} alt="Ronald Richards" style={{ width: 48, height: 48, borderRadius: '50%', objectFit: 'cover', border: '2px solid #fff', boxShadow: '0 2px 8px rgba(60,114,252,0.10)' }} />
+              <img src={imgPath.aboutInfo} alt="Ronald Richards" style={{ width: 48, height: 48, borderRadius: '50%', objectFit: 'cover', border: '2px solid #fff', boxShadow: '0 2px 8px rgba(60,114,252,0.10)' }} />
               <div>
                 <div style={{ fontWeight: 700, color: '#0f0d1d', fontSize: 16 }}>Ronald Richards</div>
                 <div style={{ color: '#222', opacity: 0.7, fontSize: 14 }}>Co, Founder</div>
@@ -85,7 +78,7 @@ const AboutSection = () => (
       </Row>
     </div>
     <div className="about-line-anim wow slideInLeft" style={{ position: 'absolute', left: 0, bottom: 0, zIndex: 1, pointerEvents: 'none' }}>
-      <img src={aboutLineShape} alt="About Line Shape" className="about-line-shape sway_Y" />
+      <img src={imgPath.aboutLine} alt="About Line Shape" className="about-line-shape sway_Y" />
     </div>
   </section>
 );

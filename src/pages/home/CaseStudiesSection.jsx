@@ -6,21 +6,16 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Container, Row, Col } from "react-bootstrap";
-import subtitleIcon from "../../assets/images/icons/section-title.png";
-import case1 from "../../assets/images/case/case-image1.jpg";
-import case2 from "../../assets/images/case/case-image2.jpg";
-import case3 from "../../assets/images/case/case-image3.jpg";
-import case4 from "../../assets/images/case/case-image4.jpg";
+import { imgPath } from '../../utils/constant';
 
 const CASES_PER_PAGE = 4;
 const cases = [
-  { img: case1, category: "Solution", title: "IT Management" },
-  { img: case2, category: "Security", title: "Network Security" },
-  { img: case3, category: "Cloud", title: "Cloud Migration" },
-  { img: case4, category: "Support", title: "24/7 IT Support" },
-  { img: case1, category: "Extra", title: "Another Case" },
-  { img: case2, category: "More", title: "Yet Another" },
+  { img: imgPath.caseImage1, category: "Solution", title: "IT Management" },
+  { img: imgPath.caseImage2, category: "Security", title: "Network Security" },
+  { img: imgPath.caseImage3, category: "Cloud", title: "Cloud Migration" },
+  { img: imgPath.caseImage4, category: "Support", title: "24/7 IT Support" },
+  { img: imgPath.caseImage1, category: "Extra", title: "Another Case" },
+  { img: imgPath.caseImage2, category: "More", title: "Yet Another" },
 ];
 
 const CaseStudiesSection = () => (
@@ -29,12 +24,12 @@ const CaseStudiesSection = () => (
       <div className="d-flex justify-content-between align-items-center flex-wrap gap-3" style={{ marginBottom: 60 }}>
         <div>
           <div className="d-flex align-items-center mb-2 offer-section__subtitle" style={{ gap: 8 }}>
-            <img src={subtitleIcon} alt="Section Icon" style={{ verticalAlign: 'middle' }} />
+            <img src={imgPath.sectionTitle} alt="Section Icon" style={{ verticalAlign: 'middle' }} />
             FROM OUR CASE STUDIES
           </div>
           <h2 className="offer-section__title">We Delivered Best Solution</h2>
         </div>
-        <Button style={{ background: "var(--main-gradient)", border: "none", fontWeight: 600, padding: "14px 32px", fontSize: 18, backgroundImage: "var(--main-gradient)", color: "#fff", borderRadius: 0, display: 'flex', alignItems: 'center', gap: 10 }} className="btn-one">
+        <Button style={{ background: "var(--main-gradient)", border: "none", fontWeight: 600, padding: "14px 32px", fontSize: 18, backgroundImage: 'var(--main-gradient)', color: "#fff", borderRadius: 0, display: 'flex', alignItems: 'center', gap: 10 }} className="btn-one">
           View All Case <FaArrowRightLong style={{ fontSize: 22 }} />
         </Button>
       </div>

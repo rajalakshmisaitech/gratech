@@ -1,13 +1,7 @@
 import React from "react";
 import { Button, Row, Col } from "react-bootstrap";
 import { FaArrowRightLong } from "react-icons/fa6";
-import subtitleIcon from "../../assets/images/icons/section-title.png";
-import offerShadowShape from "../../assets/images/shapes/offer-shadow-shape.png";
-import offerBgShapeLeft from "../../assets/images/shapes/offer-bg-shape-left.png";
-import offerBgShapeRight from "../../assets/images/shapes/offer-bg-shape-right.png";
-import shapeTop from '../../assets/images/shapes/offter-item-shape-top.png';
-import shapeBottom from '../../assets/images/shapes/offter-item-shape-bottom.png';
-
+import { imgPath } from '../../utils/constant';
 
 // Dynamic offerings data
 const offerings = [
@@ -87,9 +81,9 @@ const offerings = [
 const OfferingSection = () => (
   <section className="section" style={{ background: "var(--secondary-color)", padding: "120px 0 200px 0", position: "relative" }}>
     {/* Background shapes ... unchanged ... */}
-    <img
-      src={offerShadowShape}
-      alt="Offer Shadow"
+    <img 
+      src={imgPath.offerShadowShape} 
+      alt="Offer Shadow" 
       style={{
         position: "absolute",
         top: "50%",
@@ -101,21 +95,21 @@ const OfferingSection = () => (
       }}
     />
     <div style={{ position: "absolute", bottom: 0, left: 0, opacity: 0.3, zIndex: -1 }}>
-      <img src={offerBgShapeLeft} alt="Offer Background Shape Left" style={{ maxWidth: "100%", height: "auto" }} />
+      <img src={imgPath.offerBgShapeLeft} alt="Offer Background Shape Left" style={{ maxWidth: "100%", height: "auto" }} />
     </div>
     <div style={{ position: "absolute", top: 0, right: 0, opacity: 0.3, zIndex: -1 }}>
-      <img src={offerBgShapeRight} alt="Offer Background Shape Right" style={{ maxWidth: "100%", height: "auto" }} />
+      <img src={imgPath.offerBgShapeRight} alt="Offer Background Shape Right" style={{ maxWidth: "100%", height: "auto" }} />
     </div>
     <div className="container">
       <div className="d-flex justify-content-between align-items-center flex-wrap gap-3" style={{ marginBottom: 60 }}>
         <div>
           <div className="d-flex align-items-center mb-2 offer-section__subtitle" style={{ gap: 8 }}>
-            <img src={subtitleIcon} alt="Section Icon" style={{ verticalAlign: 'middle' }} />
+            <img src={imgPath.sectionTitle} alt="Section Icon" style={{ verticalAlign: 'middle' }} />
             OUR OFFERING
           </div>
           <h2 className="offer-section__title" style={{ color: '#fff' }}>Enhance and Pioneer Using Technology Trends</h2>
         </div>
-        <Button style={{ background: "var(--main-gradient)", border: "none", fontWeight: 600, padding: "14px 32px", fontSize: 18, backgroundImage: "var(--main-gradient)", color: "#fff", borderRadius: 0, display: 'flex', alignItems: 'center', gap: 10 }} className="btn-one">
+        <Button style={{ background: "var(--main-gradient)", border: "none", fontWeight: 600, padding: "14px 32px", fontSize: 18, backgroundImage: 'var(--main-gradient)', color: "#fff", borderRadius: 0, display: 'flex', alignItems: 'center', gap: 10 }} className="btn-one">
           Explore More <FaArrowRightLong style={{ fontSize: 22 }} />
         </Button>
       </div>
@@ -124,21 +118,21 @@ const OfferingSection = () => (
           <Col key={idx} lg={2} md={4} sm={6}>
             <div className="offering-card">
               <div className="shape-top">
-                <img src={shapeTop} alt="Shape Top" />
-              </div>
+                <img src={imgPath.offterItemShapeTop} alt="Shape Top" />
+            </div>
               <div className="shape-bottom">
-                <img src={shapeBottom} alt="shape bottom" />
-              </div>
+                <img src={imgPath.offterItemShapeBottom} alt="shape bottom" />
+          </div>
               <div className="offering-icon-container">
                 <span className="offering-icon">
                   {offering.icon}
-                </span>
-              </div>
+              </span>
+            </div>
               <h4 className="offering-title">
                 {offering.title}
-              </h4>
-            </div>
-          </Col>
+            </h4>
+          </div>
+        </Col>
         ))}
       </Row>
     </div>

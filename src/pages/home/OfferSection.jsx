@@ -1,25 +1,20 @@
 import React from "react";
 import { Row, Col, Card, Button } from "react-bootstrap";
-import { FaTools, FaShieldAlt, FaCode } from "react-icons/fa";
-import serviceShape from "../../assets/images/shapes/service-item-shape.png";
-import serviceIcon1 from "../../assets/images/icons/service-icon1.png";
-import serviceIcon2 from "../../assets/images/icons/service-icon2.png";
-import serviceIcon3 from "../../assets/images/icons/service-icon3.png";
-import sectionTitleImg from "../../assets/images/icons/section-title.png";
+import { imgPath } from '../../utils/constant';
 
 const services = [
   {
-    icon: serviceIcon1,
+    icon: imgPath.serviceIcon1,
     title: "IT Management",
     desc: "Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac iaculis ut euismod quis sapien.",
   },
   {
-    icon: serviceIcon2,
+    icon: imgPath.serviceIcon2,
     title: "Cyber Security",
     desc: "Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac iaculis ut euismod quis sapien.",
   },
   {
-    icon: serviceIcon3,
+    icon: imgPath.serviceIcon3,
     title: "Web Development",
     desc: "Pellentesque nec the condimentum nec lorem nulla augue est ultricies ac iaculis ut euismod quis sapien.",
   },
@@ -31,7 +26,7 @@ const OfferSection = () => (
       <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
         <div>
           <div className="d-flex align-items-center mb-2 offer-section__subtitle" style={{ gap: 8 }}>
-            <span><img src={sectionTitleImg} alt="Section Icon" style={{ verticalAlign: 'middle' }} /></span>
+            <span><img src={imgPath.sectionTitle} alt="Section Icon" style={{ verticalAlign: 'middle' }} /></span>
             WHAT WE OFFER
           </div>
           <h2 className="offer-section__title">Excellent It Services</h2>
@@ -45,7 +40,7 @@ const OfferSection = () => (
           <Col key={service.title} md={6} lg={4}>
             <Card className="service__item shadow-sm h-100" style={{ border: "none", borderRadius: 0, position: "relative", overflow: "hidden" }}>
               {/* Pattern image, only visible on hover via CSS */}
-              <img src={serviceShape} alt="Service Shape" className="service__pattern" />
+              <img src={imgPath.serviceItemShape} alt="Service Shape" className="service__pattern" />
               <Card.Body className="d-flex flex-column align-items-start p-4 position-relative" style={{ zIndex: 2 }}>
                 <div className="service__icon" style={{ background: 'rgba(60, 114, 252, 0.1)', borderRadius: 8, padding: 12, marginBottom: 24 }}>
                   <img src={service.icon} alt={service.title} />
