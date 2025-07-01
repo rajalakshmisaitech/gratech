@@ -725,6 +725,12 @@ ul.list-unstyled > li:not(:last-child) {
 .header-navbar {
   padding: 0 !important;
 }
+@media (max-width: 1199.98px) {
+  .header-navbar {
+  padding: 10px 0 !important;
+    
+  }
+}
 
 .header-nav-link {
   padding: 40px 0 !important;

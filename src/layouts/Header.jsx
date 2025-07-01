@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <>
       {/* Top Header */}
-      <div className={`top-header d-none d-lg-block ${isScrolled ? 'hidden' : ''}`}>
+      <div className={`top-header d-none d-xl-block ${isScrolled ? 'hidden' : ''}`}>
         <Container>
           <div className="top-header-contact">
             <div className="contact-item">
