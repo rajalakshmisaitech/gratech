@@ -2,6 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { FaTwitter } from "react-icons/fa";
 import { FaAnglesRight, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { IoMdTime } from "react-icons/io";
 import { MdCall } from "react-icons/md";

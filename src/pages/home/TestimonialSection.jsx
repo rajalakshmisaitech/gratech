@@ -28,7 +28,12 @@ const TestimonialSection = () => {
   ];
 
   return (
-    <section className="testimonial-section section testimonial-section-bg">
+    <section
+      className="testimonial-section section testimonial-section-bg"
+      style={{
+        background: `url(${imgPath.testimonialBg}) center/cover no-repeat`,
+      }}
+    >
       <Container>
         <Row className="align-items-center">
           {/* Left Side - Form */}
