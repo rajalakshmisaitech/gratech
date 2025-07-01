@@ -1,0 +1,441 @@
+/* CSS Variables for Testimonial Section */
+:root {
+  --primary-color: #3c72fc;
+  --secondary-color: #0f0d1d;
+  --white: #ffffff;
+  --paragraph: #585858;
+  --main-gradient: linear-gradient(90deg, #3c72fc -10.59%, #00060c 300.59%);
+  --transition: all 0.3s ease-in-out;
+}
+
+/* Client Review Section Styles */
+.testimonial-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+  min-height: 400px;
+}
+
+/* Left Side - Form Container */
+.form-container {
+  background: var(--main-gradient);
+  padding: 60px;
+  border-radius: 0;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.form-subtitle {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-title {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Form Styles */
+.contact-form .form-label {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.contact-form .form-control {
+  padding: 15px 20px;
+  background-color: var(--white);
+  border: none;
+  outline: none;
+  color: var(--paragraph);
+  width: 100%;
+  border-radius: 0;
+}
+
+.contact-form .form-control::placeholder {
+  color: var(--paragraph);
+  opacity: 0.7;
+}
+
+.contact-form .form-control:focus {
+  padding: 15px 20px;
+  background-color: var(--white);
+  border: none;
+  outline: none;
+  color: var(--paragraph);
+  width: 100%;
+  border-radius: 0;
+}
+
+.contact-form textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.send-message-btn {
+  padding: 15px 20px !important;
+  background-color: var(--secondary-color) !important;
+  color: var(--white) !important;
+  font-weight: 600 !important;
+  width: 100%;
+  text-align: center !important;
+  margin-top: 15px;
+  transition: var(--transition) !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.send-message-btn:hover {
+  background: var(--secondary-color);
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Right Side - Content Container */
+.content-container {
+  padding: 40px 20px;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.content-subtitle {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.content-title {
+  color: var(--secondary-color);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.content-description {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 991.98px) {
+  .form-container,
+  .content-container {
+    padding: 30px 20px;
+  }
+  
+  .form-title,
+  .content-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .form-container,
+  .content-container {
+    padding: 25px 15px;
+  }
+  
+  .form-title,
+  .content-title {
+    font-size: 24px;
+  }
+}
+
+.testimonial-section-bg {
+  background: url('../../assets/images/testimonial/testimonial-bg.png') no-repeat center center/cover;
+}
+
+/* Testimonial Slider Styles */
+.testimonial-slider {
+  margin-top: 50px;
+  position: relative;
+}
+
+.testimonial-swiper {
+  padding-bottom: 50px;
+}
+
+/* Modern Testimonial Card Layout */
+.testimonial-item-modern {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  padding: 32px 32px 28px 32px;
+  position: relative;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.testimonial-author-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f3f6fa;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+}
+
+.testimonial-author-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.testimonial-author-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.testimonial-author-position {
+  font-size: 15px;
+  color: #7a7a7a;
+  margin-bottom: 6px;
+}
+
+.testimonial-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 0;
+}
+
+.testimonial-quote-icon {
+  color: #2563eb;
+  font-size: 38px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.testimonial-modern-text {
+  font-size: 16px;
+  color: #585858;
+  margin-top: 10px;
+  line-height: 1.7;
+  font-style: italic;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: left;
+  position: relative;
+}
+
+.testimonial-modern-text:before {
+  content: '\201C';
+  color: #bfc8e6;
+  font-size: 32px;
+  position: absolute;
+  left: -18px;
+  top: -10px;
+  font-family: serif;
+  opacity: 0.7;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.swiper-button-next, .swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+  border: 1.5px solid #e3e8f0;
+  color: #2563eb;
+  top: unset;
+  bottom: -32px;
+  z-index: 2;
+  transition: var(--transition);
+}
+.swiper-button-next {
+  right: calc(50% - 24px);
+}
+.swiper-button-prev {
+  left: calc(50% - 72px);
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 22px;
+  font-weight: bold;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+@media (max-width: 767.98px) {
+  .testimonial-item-modern {
+    padding: 20px 10px 18px 10px;
+  }
+  .testimonial-header {
+    gap: 10px;
+  }
+  .testimonial-author-img {
+    width: 50px;
+    height: 50px;
+  }
+  .testimonial-author-name {
+    font-size: 17px;
+  }
+  .testimonial-modern-text {
+    font-size: 14px;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    width: 36px;
+    height: 36px;
+    bottom: -24px;
+  }
+  .swiper-button-next {
+    right: calc(50% - 20px);
+  }
+  .swiper-button-prev {
+    left: calc(50% - 56px);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .testimonial-item {
+    padding: 25px;
+  }
+  
+  .testimonial-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .testimonial-item {
+    padding: 20px;
+  }
+  
+  .testimonial-text {
+    font-size: 14px;
+    padding-left: 15px;
+  }
+  
+  .testimonial-text::before {
+    font-size: 50px;
+    left: -8px;
+    top: -15px;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.testimonial-nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+.testimonial-nav-line {
+  flex: 1;
+  border: none;
+  border-top: 1.5px solid #3C72FC;
+  opacity: 0.2;
+  margin: 0 8px;
+}
+
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.custom-swiper-button-prev svg circle {
+  fill: #fff;
+  stroke: #3C72FC;
+}
+.custom-swiper-button-prev svg path {
+  stroke: #3C72FC;
+}
+
+.custom-swiper-button-next svg circle {
+  fill: #3C72FC;
+  stroke: #3C72FC;
+}
+.custom-swiper-button-next svg path {
+  stroke: #fff;
+}
+
+.custom-swiper-button-next:focus,
+.custom-swiper-button-prev:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #3C72FC33;
+}
+
+/* Hide default Swiper navigation and pagination */
+.swiper-pagination,
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+} 
